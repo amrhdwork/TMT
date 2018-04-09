@@ -1,31 +1,21 @@
 page-home {
-
-    ion-content .scroll-content{
-        background-color: black;
-
-    }
-
-    ion-title{
-        font-family: CairoSemiBold;
-    }
-
+    ion-card {
+        font-size: 1.4rem;
+        line-height: 1.5;
+    };      
+    ion-slides {
+        height: 25vh;
+        width: 100%;
+        };
 };
 
-ion-slides {
 
-height: 25vh;
-width: 100%;
-
-
-};
 
 .NAVLOGO {
-
     height: 8vh;
     width: 8vh;
     align-items: center;
- 
+ };
 
-};
 
 
