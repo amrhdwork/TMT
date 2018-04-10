@@ -1,2 +1,11 @@
-page-livesupport {}
+page-livesupport {
+
+    .card-md h3, .card-md h4, .card-md h5, .card-md h6 {
+        font-size: 2.6rem;
+        color: #01579B ;
+        padding: 16px;
+        text-align: center;
+    }
+
+};
 
