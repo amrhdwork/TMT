@@ -1,6 +1,6 @@
 import { Component,ViewChild } from '@angular/core';
 import { NavController,Slides,ModalController  } from 'ionic-angular';
-import { CONTACTPage  } from '../CONTACT/CONTACT';
+import { ContactPage  } from '../contact/contact';
 
 @Component({
   selector: 'page-home',
@@ -20,9 +20,9 @@ export class HomePage {
     this.slides.slideTo(2, 500);
   }
 
-  goToCONTACTPage(){
-    // this.navCtrl.push(CONTACTPage);
-    let modal = this.modalCtrl.create(CONTACTPage);
+  goToContactPage(){
+    // this.navCtrl.push(ContactPage);
+    let modal = this.modalCtrl.create(ContactPage);
     modal.present();
   }
   
