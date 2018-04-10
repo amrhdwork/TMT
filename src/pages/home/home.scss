@@ -6,30 +6,25 @@ page-home {
         width: calc(100%) !important  ;
     };      
     ion-card-content {
-
         padding: 0 !important ;
-
     }
-
     ion-slide img  {
         display: block;
         margin: auto;
-       }
-       
-
-
-   
-            
+    }
+    .fab-md {
+        background-color: white;
+    };
 };
 
 ion-slides {
-height: 25vh;
-width: 100%;
+    height: 25vh;
+    width: 100%;
 };
 
 .NAVLOGO {
     height: 8vh;
     width: 8vh;
     align-items: center;
- };
+};
 

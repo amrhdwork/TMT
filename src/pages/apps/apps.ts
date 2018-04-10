@@ -11,4 +11,15 @@ export class appsPage {
 
   }
 
+  openWebpage() {
+    console.log("openWebpage");
+    window.open("http://google.com", '_system', 'location=yes');
+  };
+
+
 }
+
+// function openWebpage(){
+
+//   window.open("http://google.com",'_system', 'location=yes');
+// };
