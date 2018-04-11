@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar color= primary>
+  <ion-navbar color="primary">
     <ion-title>
       الدعم المباشر
     </ion-title>
@@ -8,29 +8,67 @@
 
 <ion-content>
 
-    <ion-card>
+  <ion-card>
 
-        <ion-card-content>
-            <img src="assets/imgs/support.svg">
-            <h4>  ارسل لنا طلبك الان  </h4>
+    <ion-card-content>
+      <img style="height: 20vh;" src="assets/imgs/support.svg">
+      <h3>
+ارسل لنا طلبك الان 
+      </h3>
+      <br>
+      <h2> اكتب تفاصيل الطلب واختار الخدمة المرادة وسنرد عليك فى اقرب وقت كما يمكنك الضغط على زر المحادثة فى الاسفل للتحدث مباشرة
+        الى خدمة العملاء
+      </h2>
+    </ion-card-content>
 
+  </ion-card>
 
-        </ion-card-content>
+  <ion-list>
+
+      <ion-item>
+        <ion-label floating>الاسم</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label floating>البريد الالكترونى</ion-label>
+        <ion-input type="email"></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label floating >رقم الجوال</ion-label>
+          <ion-input type="number"></ion-input>
+        </ion-item>
+        <ion-list>
+            <ion-item>
+              <ion-label>اختار الخدمة</ion-label>
+              <ion-select  [(ngModel)]="gaming">
+                <ion-option value="nes">تطبيق جوال</ion-option>
+                <ion-option value="n64">موقع الكترونى</ion-option>
+                <ion-option value="ps">متجر الكترونى</ion-option>
+                <ion-option value="genesis">برامج مخصصة للشركات</ion-option>
+                <ion-option value="saturn">تصميمات </ion-option>
+                <ion-option value="saturn">تسويق الكترونى</ion-option>
+                <ion-option value="snes">اخرى</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+          <ion-item>
+              <ion-label floating >وصف الطلب</ion-label>
+              <ion-input type="text" value=""></ion-input>
+            </ion-item>
       
-      </ion-card>
+            <br>
+        <button ion-button full color="primary">ارسال</button>
+        <br>
+    
+    </ion-list>
 
- <ion-list>
 
-  <ion-item>
-    <ion-label fixed>Username</ion-label>
-    <ion-input type="text" value=""></ion-input>
-  </ion-item>
+  <ion-fab left bottom>
+    <button ion-fab color="primary">
+      <ion-icon ios="md-chatbubbles" md="md-chatbubbles"></ion-icon>
+    </button>
 
-  <ion-item>
-    <ion-label fixed>Password</ion-label>
-    <ion-input type="password"></ion-input>
-  </ion-item>
-
-</ion-list>
+  </ion-fab>
 
 </ion-content>

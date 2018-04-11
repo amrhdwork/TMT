@@ -12,8 +12,17 @@ export class appsPage {
   }
 
   openWebpage() {
-    window.open("http://google.com", '_system', 'location=yes');
+    window.open("https://play.google.com/store/apps/details?id=com.tmtgps", '_system', 'location=yes');
   };
+
+  openWebpage2() {
+    window.open("https://itunes.apple.com/us/app/tmtgps/id920553506?mt=8", '_system', 'location=yes');
+  };
+
+  openWebpage3() {
+    window.open("http://www.tmtgps.net/", '_system', 'location=yes');
+  };
+
 
 
 }
