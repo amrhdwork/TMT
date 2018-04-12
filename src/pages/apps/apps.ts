@@ -27,6 +27,7 @@ export class appsPage {
   };
 
   goToSlide(index) {
+    console.log(index);
     if (index == 0) {
       this.tabs = "projects"
     } else {

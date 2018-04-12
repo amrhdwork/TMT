@@ -2,6 +2,7 @@ page-livesupport {
 
     ion-navbar{
         padding: 0px !important ;
+        height: 56px;
         
             };
 
@@ -22,13 +23,15 @@ page-livesupport {
 ion-toolbar{
     padding: 0px !important ;
     
+    
         };
 
 
 
     .card-md h3, .card-md h4, .card-md h5, .card-md h6 {
         font-size: 2.6rem;
-        color: #01579B ;
+        color:  color($colors, primary, base);
+        ;
         padding: 16px;
         text-align: center;
     }
