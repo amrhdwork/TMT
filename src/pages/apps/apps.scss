@@ -1,9 +1,21 @@
 page-apps {
-};
+    .img-header{
+        position: absolute;
+        top: 0;
+    }
+    
+    segment-button-md-font-size {
 
-segment-button-md-font-size {
+        font-size: 5.2rem;
 
-    font-size: 
-    5.2rem;
+    };
+
+    ion-slide{
+        margin-top: -2px;
+        .slide-zoom{
+            height: calc(100% - 28px);
+            overflow: auto;
+        }
+    }
 
 };

@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController, Slides } from 'ionic-angular';
 
 @Component({
   selector: 'page-apps',
@@ -7,11 +7,14 @@ import { NavController } from 'ionic-angular';
 })
 export class appsPage {
 
+  tabs: string = "projects";
+  @ViewChild(Slides) slides: Slides;
+
   constructor(public navCtrl: NavController) {
 
   }
 
-  openWebpage() {
+  openWebpage1() {
     window.open("https://play.google.com/store/apps/details?id=com.tmtgps", '_system', 'location=yes');
   };
 
@@ -23,11 +26,23 @@ export class appsPage {
     window.open("http://www.tmtgps.net/", '_system', 'location=yes');
   };
 
+  goToSlide(index) {
+    if (index == 0) {
+      this.tabs = "projects"
+    } else {
+      this.tabs = "clients"
+
+    }
+    this.slides.lockSwipes(false);
+    this.slides.slideTo(index, 500);
+    this.slides.lockSwipes(true);
+  }
+
+  ngAfterViewInit() {
+    this.slides.lockSwipes(true);
+  }
+
 
 
 }
 
-// function openWebpage(){
-
-//   window.open("http://google.com",'_system', 'location=yes');
-// };

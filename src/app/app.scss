@@ -28,3 +28,9 @@
 *{
     font-family: CairoSemiBold;
 }
+
+.no-scroll {
+    scroll-content {
+        overflow-y: hidden;
+    }
+}

@@ -1,8 +1,11 @@
 <ion-header>
   <ion-navbar color="primary">
-    <ion-title>
-      الدعم المباشر
+      <img width="100%"  src="assets/imgs/nav-background.png">
+
+    <ion-title class="titlepos">
+      الدعم الفنى
     </ion-title>
+    
   </ion-navbar>
 </ion-header>
 
@@ -11,14 +14,18 @@
   <ion-card>
 
     <ion-card-content>
-      <img style="height: 20vh;" src="assets/imgs/support.svg">
+      <img  src="assets/imgs/support.svg">
+
+
+      <h2 style="padding: 10px ">
+          هل لديك متجر او مشروع في الواقع وتريد زيادة المبيعات وتسويقه لشريحة جديدة من العملاء عن طريق الانترنت
+</h2>
+
       <h3>
-ارسل لنا طلبك الان 
-      </h3>
-      <br>
-      <h2> اكتب تفاصيل الطلب واختار الخدمة المرادة وسنرد عليك فى اقرب وقت كما يمكنك الضغط على زر المحادثة فى الاسفل للتحدث مباشرة
-        الى خدمة العملاء
-      </h2>
+ارسل لنا طلبك الان ..  
+     </h3>
+
+      
     </ion-card-content>
 
   </ion-card>
@@ -35,12 +42,12 @@
         <ion-input type="email"></ion-input>
       </ion-item>
       <ion-item>
-          <ion-label floating >رقم الجوال</ion-label>
+          <ion-label floating>رقم الجوال</ion-label>
           <ion-input type="number"></ion-input>
         </ion-item>
         <ion-list>
             <ion-item>
-              <ion-label>اختار الخدمة</ion-label>
+              <ion-label>اختار نوع الخدمة</ion-label>
               <ion-select  [(ngModel)]="gaming">
                 <ion-option value="nes">تطبيق جوال</ion-option>
                 <ion-option value="n64">موقع الكترونى</ion-option>
@@ -59,9 +66,21 @@
       
             <br>
         <button ion-button full color="primary">ارسال</button>
-        <br>
+       
     
     </ion-list>
+    <br>
+    
+
+<hr>
+    
+
+    <h6 style="padding: 10px ">
+للتحدث الى خدمة العملاء الان
+<br>
+اضغط على زر المحادثة على اليسار  
+</h6>
+
 
 
   <ion-fab left bottom>
