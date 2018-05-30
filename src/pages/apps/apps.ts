@@ -1,5 +1,9 @@
 import { Component, ViewChild } from '@angular/core';
-import { NavController, Slides } from 'ionic-angular';
+import {ModalController, NavController, Slides} from 'ionic-angular';
+import {HttpClient} from "@angular/common/http";
+import 'rxjs/add/operator/map';
+import {ContactPage} from "../contact/contact";
+
 
 @Component({
   selector: 'page-apps',
@@ -10,8 +14,29 @@ export class appsPage {
   tabs: string = "projects";
   @ViewChild(Slides) slides: Slides;
 
-  constructor(public navCtrl: NavController) {
 
+  url: string = "http://altatawwar.com/api/ourProjects.php";
+  projects  = [];
+
+  constructor(public navCtrl: NavController ,public http: HttpClient ,  public modalCtrl: ModalController ,) {
+      this.getdata();
+  }
+
+  getdata() {
+    return this.http.get(this.url)
+      // .map(res => res.json())
+      .subscribe(data => {
+        console.log(data);
+        console.log(data['success']);
+        if(data['success'] == 1){
+          this.projects = data['projects'];
+          console.log(data['projects']);
+        }
+      })
+  }
+
+  openSite(siteUrl){
+    window.open(siteUrl, '_system', 'location=yes');
   }
 
   openWebpage1() {
@@ -43,7 +68,15 @@ export class appsPage {
     this.slides.lockSwipes(true);
   }
 
+  goToContactPage(){
+    // this.navCtrl.push(ContactPage);
+    let modal = this.modalCtrl.create(ContactPage);
+    modal.present();
+  }
 
 
 }
+
+
+
 

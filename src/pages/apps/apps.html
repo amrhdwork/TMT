@@ -1,13 +1,12 @@
 <ion-header>
   <ion-toolbar color=primary>
 
-      <img class="img-header" width="100%"  src="assets/imgs/nav-background.png">
     <ion-segment [(ngModel)]="tabs" color="secondary">
       <ion-segment-button (click)="goToSlide(0)" value="projects">
-        مشاريعنا
+        مشاريع تطور
       </ion-segment-button>
       <ion-segment-button (click)="goToSlide(1)" value="clients">
-        مشاريع عملائنا </ion-segment-button>
+        مشاريع العملاء </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
 </ion-header>
@@ -17,37 +16,34 @@
 
   <ion-slides dir="rtl">
     <ion-slide>
-      <ion-card>
+      <ion-card *ngFor="let project of projects">
         <ion-item>
-          <ion-avatar item-start>
-            <img src="assets/imgs/app-logo1.png">
-          </ion-avatar>
-          <h2>تطبيق TMT-GPS </h2>
-          <p>نظام تتبع وحماية السيارات</p>
+
+
+          <h2>{{project.name}}</h2>
+          <p>{{project.desc}}</p>
         </ion-item>
 
-        <img src="assets/imgs/app-pic1.png">
+        <img [src]="project.image">
 
         <ion-card-content>
-          <p>شركة تطور لديها أحدث نظام لإدارة الاسطول ومتابعة تحركات السيارات للمندوبين والعاملين بالشركات للمحافظة على الاسطول
-            وزيادة انتاج العاملين فنظام التتبع متكامل ويساعد صاحب العمل او الشركة على حساب كل شئ يخص الاسطول من مصروفات صيانة
-            وخطوط السير وتوجيه العاملين وعدد ساعات عمل السيارات والعاملين وأيضا المعدات وغيرها </p>
+          <p>{{project.text}}</p>
         </ion-card-content>
         <ion-row>
-          <ion-col>
-            <button (click)="openWebpage1('')" ion-button icon-left clear small>
+          <ion-col *ngIf="project.android != ''">
+            <button (click)="openSite(project.android)" ion-button icon-left clear small>
               <ion-icon style="margin-left: 3px" ios="logo-android" md="logo-android"></ion-icon>
               <div>ANDROID</div>
             </button>
           </ion-col>
-          <ion-col>
-            <button (click)="openWebpage2('')" ion-button icon-left clear small>
+          <ion-col *ngIf="project.ios != ''">
+            <button (click)="openSite(project.ios)" ion-button icon-left clear small>
               <ion-icon style="margin-left: 3px" ios="ios-appstore" md="md-appstore"></ion-icon>
               <div>IOS</div>
             </button>
           </ion-col>
-          <ion-col>
-            <button (click)="openWebpage3('')" style="align-items: left;" ion-button icon-left clear small>
+          <ion-col *ngIf="project.website != ''">
+            <button (click)="openSite(project.website)" style="align-items: left;" ion-button icon-left clear small>
               <ion-icon style="margin-left: 3px" ios="ios-globe" md="md-globe"></ion-icon>
               <div>WEBSITE</div>
             </button>
@@ -55,201 +51,59 @@
         </ion-row>
 
       </ion-card>
-
-      <ion-card>
-          <ion-item>
-            <ion-avatar item-start>
-              <img src="assets/imgs/app-logo1.png">
-            </ion-avatar>
-            <h2>تطبيق TMT-GPS </h2>
-            <p>نظام تتبع وحماية السيارات</p>
-          </ion-item>
-  
-          <img src="assets/imgs/app-pic1.png">
-  
-          <ion-card-content>
-            <p>شركة تطور لديها أحدث نظام لإدارة الاسطول ومتابعة تحركات السيارات للمندوبين والعاملين بالشركات للمحافظة على الاسطول
-              وزيادة انتاج العاملين فنظام التتبع متكامل ويساعد صاحب العمل او الشركة على حساب كل شئ يخص الاسطول من مصروفات صيانة
-              وخطوط السير وتوجيه العاملين وعدد ساعات عمل السيارات والعاملين وأيضا المعدات وغيرها </p>
-          </ion-card-content>
-          <ion-row>
-            <ion-col>
-              <button (click)="openWebpage1('')" ion-button icon-left clear small>
-                <ion-icon style="margin-left: 3px" ios="logo-android" md="logo-android"></ion-icon>
-                <div>ANDROID</div>
-              </button>
-            </ion-col>
-            <ion-col>
-              <button (click)="openWebpage2('')" ion-button icon-left clear small>
-                <ion-icon style="margin-left: 3px" ios="ios-appstore" md="md-appstore"></ion-icon>
-                <div>IOS</div>
-              </button>
-            </ion-col>
-            <ion-col>
-              <button (click)="openWebpage3('')" style="align-items: left;" ion-button icon-left clear small>
-                <ion-icon style="margin-left: 3px" ios="ios-globe" md="md-globe"></ion-icon>
-                <div>WEBSITE</div>
-              </button>
-            </ion-col>
-          </ion-row>
-  
-        </ion-card>
-
-        <ion-card>
-            <ion-item>
-              <ion-avatar item-start>
-                <img src="assets/imgs/app-logo1.png">
-              </ion-avatar>
-              <h2>تطبيق TMT-GPS </h2>
-              <p>نظام تتبع وحماية السيارات</p>
-            </ion-item>
-    
-            <img src="assets/imgs/app-pic1.png">
-    
-            <ion-card-content>
-              <p>شركة تطور لديها أحدث نظام لإدارة الاسطول ومتابعة تحركات السيارات للمندوبين والعاملين بالشركات للمحافظة على الاسطول
-                وزيادة انتاج العاملين فنظام التتبع متكامل ويساعد صاحب العمل او الشركة على حساب كل شئ يخص الاسطول من مصروفات صيانة
-                وخطوط السير وتوجيه العاملين وعدد ساعات عمل السيارات والعاملين وأيضا المعدات وغيرها </p>
-            </ion-card-content>
-            <ion-row>
-              <ion-col>
-                <button (click)="openWebpage1('')" ion-button icon-left clear small>
-                  <ion-icon style="margin-left: 3px" ios="logo-android" md="logo-android"></ion-icon>
-                  <div>ANDROID</div>
-                </button>
-              </ion-col>
-              <ion-col>
-                <button (click)="openWebpage2('')" ion-button icon-left clear small>
-                  <ion-icon style="margin-left: 3px" ios="ios-appstore" md="md-appstore"></ion-icon>
-                  <div>IOS</div>
-                </button>
-              </ion-col>
-              <ion-col>
-                <button (click)="openWebpage3('')" style="align-items: left;" ion-button icon-left clear small>
-                  <ion-icon style="margin-left: 3px" ios="ios-globe" md="md-globe"></ion-icon>
-                  <div>WEBSITE</div>
-                </button>
-              </ion-col>
-            </ion-row>
-    
-          </ion-card> 
     </ion-slide>
+
     <ion-slide>
-        <ion-card>
-            <ion-item>
-              <ion-avatar item-start>
-                <img src="assets/imgs/app-logo1.png">
-              </ion-avatar>
-              <h2>تطبيق TMT-GPS </h2>
-              <p>نظام تتبع وحماية السيارات</p>
-            </ion-item>
-    
-            <img src="assets/imgs/app-pic1.png">
-    
-            <ion-card-content>
-              <p>شركة تطور لديها أحدث نظام لإدارة الاسطول ومتابعة تحركات السيارات للمندوبين والعاملين بالشركات للمحافظة على الاسطول
-                وزيادة انتاج العاملين فنظام التتبع متكامل ويساعد صاحب العمل او الشركة على حساب كل شئ يخص الاسطول من مصروفات صيانة
-                وخطوط السير وتوجيه العاملين وعدد ساعات عمل السيارات والعاملين وأيضا المعدات وغيرها </p>
-            </ion-card-content>
-            <ion-row>
-              <ion-col>
-                <button (click)="openWebpage1('')" ion-button icon-left clear small>
-                  <ion-icon style="margin-left: 3px" ios="logo-android" md="logo-android"></ion-icon>
-                  <div>ANDROID</div>
-                </button>
-              </ion-col>
-              <ion-col>
-                <button (click)="openWebpage2('')" ion-button icon-left clear small>
-                  <ion-icon style="margin-left: 3px" ios="ios-appstore" md="md-appstore"></ion-icon>
-                  <div>IOS</div>
-                </button>
-              </ion-col>
-              <ion-col>
-                <button (click)="openWebpage3('')" style="align-items: left;" ion-button icon-left clear small>
-                  <ion-icon style="margin-left: 3px" ios="ios-globe" md="md-globe"></ion-icon>
-                  <div>WEBSITE</div>
-                </button>
-              </ion-col>
-            </ion-row>
-    
-          </ion-card> 
-          <ion-card>
-              <ion-item>
-                <ion-avatar item-start>
-                  <img src="assets/imgs/app-logo1.png">
-                </ion-avatar>
-                <h2>تطبيق TMT-GPS </h2>
-                <p>نظام تتبع وحماية السيارات</p>
-              </ion-item>
-      
-              <img src="assets/imgs/app-pic1.png">
-      
-              <ion-card-content>
-                <p>شركة تطور لديها أحدث نظام لإدارة الاسطول ومتابعة تحركات السيارات للمندوبين والعاملين بالشركات للمحافظة على الاسطول
-                  وزيادة انتاج العاملين فنظام التتبع متكامل ويساعد صاحب العمل او الشركة على حساب كل شئ يخص الاسطول من مصروفات صيانة
-                  وخطوط السير وتوجيه العاملين وعدد ساعات عمل السيارات والعاملين وأيضا المعدات وغيرها </p>
-              </ion-card-content>
-              <ion-row>
-                <ion-col>
-                  <button (click)="openWebpage1('')" ion-button icon-left clear small>
-                    <ion-icon style="margin-left: 3px" ios="logo-android" md="logo-android"></ion-icon>
-                    <div>ANDROID</div>
-                  </button>
-                </ion-col>
-                <ion-col>
-                  <button (click)="openWebpage2('')" ion-button icon-left clear small>
-                    <ion-icon style="margin-left: 3px" ios="ios-appstore" md="md-appstore"></ion-icon>
-                    <div>IOS</div>
-                  </button>
-                </ion-col>
-                <ion-col>
-                  <button (click)="openWebpage3('')" style="align-items: left;" ion-button icon-left clear small>
-                    <ion-icon style="margin-left: 3px" ios="ios-globe" md="md-globe"></ion-icon>
-                    <div>WEBSITE</div>
-                  </button>
-                </ion-col>
-              </ion-row>
-      
-            </ion-card> 
-            <ion-card>
-                <ion-item>
-                  <ion-avatar item-start>
-                    <img src="assets/imgs/app-logo1.png">
-                  </ion-avatar>
-                  <h2>تطبيق TMT-GPS </h2>
-                  <p>نظام تتبع وحماية السيارات</p>
-                </ion-item>
-        
-                <img src="assets/imgs/app-pic1.png">
-        
-                <ion-card-content>
-                  <p>شركة تطور لديها أحدث نظام لإدارة الاسطول ومتابعة تحركات السيارات للمندوبين والعاملين بالشركات للمحافظة على الاسطول
-                    وزيادة انتاج العاملين فنظام التتبع متكامل ويساعد صاحب العمل او الشركة على حساب كل شئ يخص الاسطول من مصروفات صيانة
-                    وخطوط السير وتوجيه العاملين وعدد ساعات عمل السيارات والعاملين وأيضا المعدات وغيرها </p>
-                </ion-card-content>
-                <ion-row>
-                  <ion-col>
-                    <button (click)="openWebpage1('')" ion-button icon-left clear small>
-                      <ion-icon style="margin-left: 3px" ios="logo-android" md="logo-android"></ion-icon>
-                      <div>ANDROID</div>
-                    </button>
-                  </ion-col>
-                  <ion-col>
-                    <button (click)="openWebpage2('')" ion-button icon-left clear small>
-                      <ion-icon style="margin-left: 3px" ios="ios-appstore" md="md-appstore"></ion-icon>
-                      <div>IOS</div>
-                    </button>
-                  </ion-col>
-                  <ion-col>
-                    <button (click)="openWebpage3('')" style="align-items: left;" ion-button icon-left clear small>
-                      <ion-icon style="margin-left: 3px" ios="ios-globe" md="md-globe"></ion-icon>
-                      <div>WEBSITE</div>
-                    </button>
-                  </ion-col>
-                </ion-row>
-        
-              </ion-card>     </ion-slide>
+
+      <ion-card *ngFor="let project of projects">
+        <ion-item>
+
+          <h2>{{project.name}}</h2>
+          <p>{{project.desc}}</p>
+        </ion-item>
+
+        <img [src]="project.image">
+
+        <ion-card-content>
+          <p>{{project.text}}</p>
+        </ion-card-content>
+        <ion-row>
+          <ion-col *ngIf="project.android != ''">
+            <button (click)="openSite(project.android)" ion-button icon-left clear small>
+              <ion-icon style="margin-left: 3px" ios="logo-android" md="logo-android"></ion-icon>
+              <div>ANDROID</div>
+            </button>
+          </ion-col>
+          <ion-col *ngIf="project.ios != ''">
+            <button (click)="openSite(project.ios)" ion-button icon-left clear small>
+              <ion-icon style="margin-left: 3px" ios="ios-appstore" md="md-appstore"></ion-icon>
+              <div>IOS</div>
+            </button>
+          </ion-col>
+          <ion-col *ngIf="project.website != ''">
+            <button (click)="openSite(project.website)" style="align-items: left;" ion-button icon-left clear small>
+              <ion-icon style="margin-left: 3px" ios="ios-globe" md="md-globe"></ion-icon>
+              <div>WEBSITE</div>
+            </button>
+          </ion-col>
+        </ion-row>
+
+      </ion-card>
+    </ion-slide>
+
+
   </ion-slides>
+
+
+
+  <ion-fab left bottom>
+
+
+    <button ion-fab color="secondary" (click)="goToContactPage()">
+      <ion-icon ios="md-call" md="md-call"></ion-icon>
+    </button>
+
+  </ion-fab>
 
 
 </ion-content>

@@ -1,31 +1,30 @@
 <ion-header >
     <ion-toolbar color="primary">
 
-        <img width="100%"  src="assets/imgs/nav-background.png">
-      <ion-buttons start>
-        <button ion-button icon-only color="royal" (click)="goToContactPage()">
-          <ion-icon name="md-information-circle"></ion-icon>
-        </button>
-      </ion-buttons>
-      <ion-title></ion-title>
-      <ion-buttons end>
 
-      </ion-buttons>
+      <ion-title> <img  src="assets/imgs/logo-nav.png">
+      </ion-title>
+
+      <!--<ion-buttons start >-->
+      <!--</ion-buttons>-->
+      <!--<ion-buttons end >-->
+      <!--</ion-buttons>-->
+
+
     </ion-toolbar>
   </ion-header >
 <ion-content class="card-background-page">
 
-    <ion-fab  top center edge color="white">
-        <button ion-fab ><img src="assets/imgs/logo-nav.png"></button>
 
-      </ion-fab>
 
 
     <ion-card>
               <ion-card-content>
             <ion-slides loop="true" autoplay="1000" speed="2000" dir="rtl">
                 <ion-slide>
+
                   <img  src="assets/imgs/slides1.png">
+
                 </ion-slide>
                 <ion-slide>
                   <img src="assets/imgs/slides2.png">
@@ -43,40 +42,61 @@
 
            <button ion-button outline id="ser1" >خدماتنا</button>
 
+  <br>
 
 
-                <ion-card >
-                  <img src="assets/imgs/service1.png"/>
-                  <div class="card-title">تطبيقات جوال</div>
-                  <div class="card-subtitle">تصميم وبرمجة تطبيقات الاندرويد والايفون</div>
-                  <button ion-button full color="primary">اطلب الان</button>
+                <!--<ion-card >-->
+                  <!--<img src="assets/imgs/service1.png"/>-->
+                  <!--<div class="card-title">تطبيقات جوال</div>-->
+                  <!--<div class="card-subtitle">تصميم وبرمجة تطبيقات الاندرويد والايفون</div>-->
+                  <!--<button ion-button full color="primary">اطلب الان</button>-->
 
-                </ion-card>
-
-                <ion-card >
-                    <img src="assets/imgs/service1.png"/>
-                    <div class="card-title">مواقع الكترونية</div>
-                    <div class="card-subtitle">تصميم وبرمجة المواقع الالكترونية</div>
-                    <button ion-button full color="secondary" style="color: #212121"> اطلب الان</button>
-  
-                  </ion-card>
-                  <ion-card >
-                      <img src="assets/imgs/service1.png"/>
-                      <div class="card-title">متاجر الكترونية</div>
-                      <div class="card-subtitle">تصميم وبرمجة المتاجر الالكترونية </div>
-                      <button ion-button full color="primary">اطلب الان</button>
-    
-                    </ion-card>
-    
-                
-  
-                  
-              
-
-                
-              
+                <!--</ion-card>-->
 
 
+
+
+    <ion-list >
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="../../assets/imgs/logo-nav1.png">
+        </ion-thumbnail>
+        <h2>تطبيقات الجوال
+        </h2>
+
+        <p>هل لديك فكرة تطبيق وترغب فى تنفيذها على متجر قوقل ستور وابل ستور ، يستطيع فريق تطور مساعدتك فى تطوير فكرتك وتحويلها الى تطبيقات جوال ، بداية من التحليل ومن ثم التصميم وبعد ذلك التنفيذ ، ليخرج العمل بطريقة احترافية وتنافسية ومنصة تحقق اهداف مشروعك التجارى .
+        </p>
+      </ion-item>
+
+    </ion-list>
+
+    <ion-list >
+      <ion-item>
+        <ion-thumbnail item-start>
+          <img src="../../assets/imgs/logo-nav1.png">
+        </ion-thumbnail>
+        <h2>تطبيقات الجوال</h2>
+
+        <p>هل لديك فكرة تطبيق وترغب فى تنفيذها على متجر قوقل ستور وابل ستور ، يستطيع فريق تطور مساعدتك فى تطوير فكرتك وتحويلها الى تطبيقات جوال ، بداية من التحليل ومن ثم التصميم وبعد ذلك التنفيذ ، ليخرج العمل بطريقة احترافية وتنافسية ومنصة تحقق اهداف مشروعك التجارى .
+        </p>
+      </ion-item>
+
+    </ion-list>
+
+
+
+
+
+
+
+  <ion-fab left bottom>
+
+
+    <button ion-fab color="secondary" (click)="goToContactPage()">
+      <ion-icon ios="md-call" md="md-call"></ion-icon>
+    </button>
+
+  </ion-fab>
 
 
 </ion-content>

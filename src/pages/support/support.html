@@ -1,11 +1,10 @@
 <ion-header>
   <ion-navbar color="primary">
-      <img width="100%"  src="assets/imgs/nav-background.png">
 
     <ion-title class="titlepos">
       الدعم الفنى
     </ion-title>
-    
+
   </ion-navbar>
 </ion-header>
 
@@ -18,14 +17,14 @@
 
 
       <h2 style="padding: 10px ">
-          هل لديك متجر او مشروع في الواقع وتريد زيادة المبيعات وتسويقه لشريحة جديدة من العملاء عن طريق الانترنت
+        يسعدنا استقبال طلباتكم واستفساركم
 </h2>
 
       <h3>
-ارسل لنا طلبك الان ..  
+ارسل لنا طلبك الان ..
      </h3>
 
-      
+
     </ion-card-content>
 
   </ion-card>
@@ -36,7 +35,7 @@
         <ion-label floating>الاسم</ion-label>
         <ion-input type="text" value=""></ion-input>
       </ion-item>
-    
+
       <ion-item>
         <ion-label floating>البريد الالكترونى</ion-label>
         <ion-input type="email"></ion-input>
@@ -63,29 +62,25 @@
               <ion-label floating >وصف الطلب</ion-label>
               <ion-input type="text" value=""></ion-input>
             </ion-item>
-      
+
             <br>
-        <button ion-button full color="primary" >  ارسال</button>
-       
-    
+        <button  ion-button full color="primary" >  ارسال</button>
+
+
     </ion-list>
     <br>
-    
 
-<hr>
-    
 
-    <h6 style="padding: 10px ">
-للتحدث الى خدمة العملاء الان
-<br>
-اضغط على زر المحادثة على اليسار  
-</h6>
+
+
 
 
 
   <ion-fab left bottom>
-    <button ion-fab color="primary">
-      <ion-icon ios="md-chatbubbles" md="md-chatbubbles"></ion-icon>
+
+
+    <button ion-fab color="secondary" (click)="goToContactPage()">
+      <ion-icon ios="md-call" md="md-call"></ion-icon>
     </button>
 
   </ion-fab>

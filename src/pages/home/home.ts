@@ -4,26 +4,33 @@ import { ContactPage  } from '../contact/contact';
 
 @Component({
   selector: 'page-home',
-  templateUrl: 'home.html'
+  templateUrl: 'home.html',
 })
 
 export class HomePage {
 
+
+
   constructor(public navCtrl: NavController,
-              public modalCtrl: ModalController) {
+              public modalCtrl: ModalController ,) {
+
+
+
 
   }
 
-  @ViewChild(Slides) slides: Slides;
 
-  goToSlide() {
-    this.slides.slideTo(2, 500);
-  }
+
 
   goToContactPage(){
     // this.navCtrl.push(ContactPage);
     let modal = this.modalCtrl.create(ContactPage);
     modal.present();
   }
-  
+
+
+
 }
+
+
+
