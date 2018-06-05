@@ -18,8 +18,13 @@ export class appsPage {
   url: string = "http://altatawwar.com/api/ourProjects.php";
   projects  = [];
 
+  url2: string = "http://altatawwar.com/api/customersProjects.php";
+  projects2  = [];
+
   constructor(public navCtrl: NavController ,public http: HttpClient ,  public modalCtrl: ModalController ,) {
-      this.getdata();
+    this.getdata();
+    this.getdata2();
+
   }
 
   getdata() {
@@ -30,6 +35,20 @@ export class appsPage {
         console.log(data['success']);
         if(data['success'] == 1){
           this.projects = data['projects'];
+          console.log(data['projects']);
+        }
+      })
+  }
+
+
+  getdata2() {
+    return this.http.get(this.url2)
+    // .map(res => res.json())
+      .subscribe(data => {
+        console.log(data);
+        console.log(data['success']);
+        if(data['success'] == 1){
+          this.projects2 = data['projects'];
           console.log(data['projects']);
         }
       })

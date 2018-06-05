@@ -1,7 +1,7 @@
 <ion-header>
   <ion-navbar color="primary">
 
-    <ion-title class="titlepos">
+    <ion-title >
 اطلب الان     </ion-title>
 
   </ion-navbar>
@@ -15,68 +15,65 @@
       <img  src="assets/imgs/support.svg">
 
 
-      <h2 style="padding: 10px ">
-        يسعدنا استقبال طلباتكم واستفساركم
-</h2>
 
       <h3>
-ارسل لنا طلبك الان ..
+        يسعدنا استقبال طلباتكم واستفساركم
      </h3>
+
+      <ion-list>
+
+        <ion-item>
+          <ion-label floating>الاسم</ion-label>
+          <ion-input [(ngModel)]="support.name" type="text" value=""></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label floating>البريد الالكترونى</ion-label>
+          <ion-input [(ngModel)]="support.email" type="email"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label floating>رقم الجوال</ion-label>
+          <ion-input [(ngModel)]="support.Phone" type="number"></ion-input>
+        </ion-item>
+        <ion-list>
+          <ion-item>
+            <ion-label>اختار نوع الخدمة</ion-label>
+            <ion-select  [(ngModel)]="support.Service_type">
+              <ion-option *ngFor="let service of servicestype" value="{{service.key}}">{{service.value}}</ion-option>
+              <!--<ion-option value="n64">موقع الكترونى</ion-option>-->
+              <!--<ion-option value="ps">متجر الكترونى</ion-option>-->
+              <!--<ion-option value="genesis">برامج مخصصة للشركات</ion-option>-->
+              <!--<ion-option value="saturn">تصميمات </ion-option>-->
+              <!--<ion-option value="saturn">تسويق الكترونى</ion-option>-->
+              <!--<ion-option value="snes">اخرى</ion-option>-->
+            </ion-select>
+          </ion-item>
+        </ion-list>
+        <ion-item>
+          <ion-label floating >وصف الطلب</ion-label>
+          <ion-input [(ngModel)]="support.message" type="text" value=""></ion-input>
+        </ion-item>
+
+        <br>
+
+        <button class="but" ion-button round  (click)="sendContact()"  ion-button full color="primary" >  ارسال</button>
+
+
+      </ion-list>
+      <br>
+
+
+
 
     </ion-card-content>
 
   </ion-card>
-
-  <ion-list>
-
-      <ion-item>
-        <ion-label floating>الاسم</ion-label>
-        <ion-input type="text" value=""></ion-input>
-      </ion-item>
-
-      <ion-item>
-        <ion-label floating>البريد الالكترونى</ion-label>
-        <ion-input type="email"></ion-input>
-      </ion-item>
-      <ion-item>
-          <ion-label floating>رقم الجوال</ion-label>
-          <ion-input type="number"></ion-input>
-        </ion-item>
-        <ion-list>
-            <ion-item>
-              <ion-label>اختار نوع الخدمة</ion-label>
-              <ion-select  [(ngModel)]="gaming">
-                <ion-option value="nes">تطبيق جوال</ion-option>
-                <ion-option value="n64">موقع الكترونى</ion-option>
-                <ion-option value="ps">متجر الكترونى</ion-option>
-                <ion-option value="genesis">برامج مخصصة للشركات</ion-option>
-                <ion-option value="saturn">تصميمات </ion-option>
-                <ion-option value="saturn">تسويق الكترونى</ion-option>
-                <ion-option value="snes">اخرى</ion-option>
-              </ion-select>
-            </ion-item>
-          </ion-list>
-          <ion-item>
-              <ion-label floating >وصف الطلب</ion-label>
-              <ion-input type="text" value=""></ion-input>
-            </ion-item>
-
-            <br>
-        <button  ion-button full color="primary" >  ارسال</button>
-
-
-    </ion-list>
-    <br>
-
-
 
 
 
 
 
   <ion-fab left bottom>
-
-
     <button ion-fab color="secondary" (click)="goToContactPage()">
       <ion-icon ios="md-call" md="md-call"></ion-icon>
     </button>

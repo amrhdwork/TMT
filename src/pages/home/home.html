@@ -16,73 +16,314 @@
 <ion-content class="card-background-page">
 
 
-  <ion-card>
-    <ion-card-content>
       <ion-slides loop="true" autoplay="1000" speed="2000" dir="rtl">
-        <ion-slide>
+        <ion-slide *ngFor="let slide of slides">
 
-          <img src="assets/imgs/slides1.png">
+          <img [src]="slide">
 
         </ion-slide>
-        <ion-slide>
-          <img src="assets/imgs/slides2.png">
-        </ion-slide>
-        <ion-slide>
-          <img src="assets/imgs/slides3.png">
-        </ion-slide>
+        <!--<ion-slide>-->
+          <!--<img src="assets/imgs/slides2.png">-->
+        <!--</ion-slide>-->
+        <!--<ion-slide>-->
+          <!--<img src="assets/imgs/slides3.png">-->
+        <!--</ion-slide>-->
       </ion-slides>
-    </ion-card-content>
-  </ion-card>
 
 
-  <br>
 
 
-  <button ion-button outline id="ser1">خدماتنا</button>
-
-  <br>
-
-
+<br>
   <!--<ion-card >-->
   <!--<img src="assets/imgs/service1.png"/>-->
   <!--<div class="card-title">تطبيقات جوال</div>-->
   <!--<div class="card-subtitle">تصميم وبرمجة تطبيقات الاندرويد والايفون</div>-->
-  <!--<button ion-button full color="primary">اطلب الان</button>-->
+  <!--<button ion-button full color="primary">اطلب  </button>-->
 
   <!--</ion-card>-->
 
+  <ion-card>
 
-  <ion-list>
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="../../assets/imgs/logo-nav1.png">
-      </ion-thumbnail>
-      <h2>تطبيقات الجوال
-      </h2>
+    <ion-card-header>
+      <h1 style="color:#f53d3d ; white-space: pre-line  ">  خصم 20 % على جميع خدمات تطور </h1>
+    </ion-card-header>
 
-      <h3>
-        هل لديك فكرة تطبيق وترغب فى تنفيذها على متجر قوقل ستور وابل ستور ، يستطيع فريق تطور مساعدتك فى تطوير فكرتك
-        وتحويلها الى تطبيقات جوال ، بداية من التحليل ومن ثم التصميم وبعد ذلك التنفيذ ، ليخرج العمل بطريقة احترافية
-        وتنافسية ومنصة تحقق اهداف مشروعك التجارى .
-      </h3>
-    </ion-item>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/list0.png">
+          </ion-thumbnail>
 
-  </ion-list>
+          <p style="white-space: pre-line">
+            هنيئا لك .. لقد حصلت على خصم 20 % على جميع خدمات تطور لأنك عميل مميز لدينا و لأنك قمت بتحميل تطبيق الشركة , قدم طلبك الان
+          </p>
+        </ion-item>
+        <button color="danger" class="but" ion-button round  item-end   (click)="switchTabs()"   >اطلب الان  20%</button>
 
-  <ion-list>
-    <ion-item>
-      <ion-thumbnail item-start>
-        <img src="../../assets/imgs/logo-nav1.png">
-      </ion-thumbnail>
-      <h2>مواقع الانترنت</h2>
+      </ion-list>
+    </ion-card-content>
 
-      <p>هل لديك فكرة تطبيق وترغب فى تنفيذها على متجر قوقل ستور وابل ستور ، يستطيع فريق تطور مساعدتك فى تطوير فكرتك
-        وتحويلها الى تطبيقات جوال ، بداية من التحليل ومن ثم التصميم وبعد ذلك التنفيذ ، ليخرج العمل بطريقة احترافية
-        وتنافسية ومنصة تحقق اهداف مشروعك التجارى .
-      </p>
-    </ion-item>
+  </ion-card>
 
-  </ion-list>
+  <br>
+
+  <button ion-button outline id="ser1" style="display: block ; margin: auto">خدماتنا</button>
+  <br>
+
+  <img style="display:block; margin: auto " src="assets/imgs/assest.png"/>
+
+
+
+
+
+
+
+
+
+  <br>
+
+
+
+
+  <br>
+  <br>
+
+  <ion-card>
+
+    <ion-card-header>
+      <h1>تطبيقات الجوال</h1>
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/list1.png">
+          </ion-thumbnail>
+
+          <p style="white-space: pre-line">
+            هل لديك فكرة تطبيق وترغب فى تنفيذها على متجر قوقل ستور وابل ستور ، يستطيع فريق تطور مساعدتك فى تطوير فكرتك وتحويلها الى تطبيقات جوال ، بداية من التحليل ومن ثم التصميم وبعد ذلك التنفيذ ، ليخرج العمل بطريقة احترافية وتنافسية ومنصة تحقق اهداف مشروعك التجارى .
+
+
+          </p>
+        </ion-item>
+        <button class="but" ion-button round  item-end   (click)="switchTabs()" >اطلب   الان</button>
+
+      </ion-list>
+    </ion-card-content>
+
+  </ion-card>
+
+
+
+
+
+
+
+  <ion-card>
+
+    <ion-card-header>
+      <h1>تتبع وادارة المركبات
+      </h1>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/list2.png">
+          </ion-thumbnail>
+
+          <p style="white-space: pre-line">تمتلك شركة تطور أنظمة تتبع المركبات وإدارة الأساطيل الذي يحاكي انظمة التتبع العالمية ، و الذي بدوره يساعد ملاك الاسطول بإدارة ومتابعة تحركات المندوبين والعاملين للمحافظة على زيادة الانتاج والحد من الهدر ، والقدرة على اصدار التقاير التاريخية لجميع احداثيات المركبات كالوقوف والتشغيل وحضر التجوال و المناطق الجغرافية والصيانة و جدولة الرحلات.
+          </p>
+        </ion-item>
+        <button class="but" ion-button round  item-end   (click)="switchTabs()" >اطلب   الان</button>
+
+
+
+      </ion-list>
+
+    </ion-card-content>
+
+  </ion-card>
+
+
+
+
+
+  <ion-card>
+
+    <ion-card-header>
+      <h1>
+        برامج نقاط البيع
+
+      </h1>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/list3.png">
+          </ion-thumbnail>
+
+          <p style="white-space: pre-line">
+            برنامج TMT Pos لإدارة مبيعات متجرك من خلال الجهاز اللوحى والجوال الذي بدوره يساعدك فى تسهيل ادارة المخزون وتصور تحليلات المبيعات وقراءة بيانات عملائك لمضاعفة متوسط انفاقهم
+          </p>
+        </ion-item>
+        <button class="but" ion-button round  item-end   (click)="switchTabs()" >اطلب   الان</button>
+
+      </ion-list>
+
+    </ion-card-content>
+
+  </ion-card>
+
+
+
+
+  <ion-card>
+
+    <ion-card-header>
+      <h1>
+         المواقع الإكترونية
+
+      </h1>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/list4.png">
+          </ion-thumbnail>
+
+          <p style="white-space: pre-line">
+            هي بوابة نشاطك التجارى التى يجب ان تنفذ بكل احترافية لإستقبال ملايين الزوار وتحويلهم الى عملاء ، ومما لا يدع مجال للشك ان تواجد نشاطك التجارى على شبكة الأنترنت وامتلاك موقعك الخاص بالغ للأهمية لعرض خدماتك وعقد الصفقات وزيادة البيع وتطوير الأعمال والانتشار بأقل التكاليف وتسهيل عملية الوصول والتواصل مع عملائك واستقبال الطلبات والأراّء وتقييم الخدمات المقدمة لهم ..
+
+
+          </p>
+        </ion-item>
+        <button class="but" ion-button round  item-end   (click)="switchTabs()" >اطلب   الان</button>
+
+      </ion-list>
+
+    </ion-card-content>
+
+  </ion-card>
+
+
+  <ion-card>
+
+    <ion-card-header>
+      <h1>
+        المتاجر الالكترونية
+      </h1>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/list5.png">
+          </ion-thumbnail>
+
+          <p style="white-space: pre-line">
+            نقوم في تطور بتنفيذ برمجة وتصميم المتاجر الإلكترونية بأحدث الأساليب التقنية والفنية ويتم ربط المتجر بالمنصات العالمية وشركات الشحن و تقديم الدعم لنظام الدفع الاكتروني المختلفة مثل الباي بال والفيزا والماستر كارد وكذلك نقوم بالتكامل مع شركات الدفع السعودية سداد ومدى
+
+
+          </p>
+        </ion-item>
+        <button class="but" ion-button round  item-end   (click)="switchTabs()" >اطلب   الان</button>
+
+      </ion-list>
+
+    </ion-card-content>
+
+  </ion-card>
+
+
+  <ion-card>
+
+    <ion-card-header>
+      <h1>
+        تصميم الهوية التجارية
+      </h1>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/list6.png">
+          </ion-thumbnail>
+
+          <p style="white-space: pre-line">
+            نصمم الهوية التجارية بشكل متكامل بعد دارسة نشاط المنشأة الراغبة في تنفيذ الهوية ليمتزج روح الهوية بأعمال الشركة والخدمات المقدمة التي بدورها تدعم تطلعات النشاط التجاري وتحقق اهدافه.
+
+
+          </p>
+        </ion-item>
+        <button class="but" ion-button round  item-end   (click)="switchTabs()" >اطلب   الان</button>
+
+      </ion-list>
+
+    </ion-card-content>
+
+  </ion-card>
+
+
+  <ion-card>
+
+    <ion-card-header>
+      <h1>
+        التسويق الإلكتروني
+      </h1>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="assets/imgs/list7.png">
+          </ion-thumbnail>
+
+          <p style="white-space: pre-line">
+            بناء الحملات التسويقية وصناعة المحتوى على منصات وسائل التواصل الإجتماعي يوتيوب تويتر انستقرام سناب شات فيسبوك وعبر محركات البحث قوقل ادز .
+
+
+          </p>
+        </ion-item>
+        <button class="but" ion-button round  item-end   (click)="switchTabs()" >اطلب   الان</button>
+
+      </ion-list>
+
+    </ion-card-content>
+
+  </ion-card>
+
+
+
+
+  <!--<ion-list>-->
+    <!--<ion-item>-->
+      <!--<ion-thumbnail item-start>-->
+        <!--<img src="../../assets/imgs/logo-nav1.png">-->
+      <!--</ion-thumbnail>-->
+      <!--<h2>تطبيقات الجوال-->
+      <!--</h2>-->
+
+      <!--<h3>-->
+        <!--هل لديك فكرة تطبيق وترغب فى تنفيذها على متجر قوقل ستور وابل ستور ، يستطيع فريق تطور مساعدتك فى تطوير فكرتك-->
+        <!--وتحويلها الى تطبيقات جوال ، بداية من التحليل ومن ثم التصميم وبعد ذلك التنفيذ ، ليخرج العمل بطريقة احترافية-->
+        <!--وتنافسية ومنصة تحقق اهداف مشروعك التجارى .-->
+      <!--</h3>-->
+    <!--</ion-item>-->
+
+  <!--</ion-list>-->
+
 
 
   <ion-fab left bottom>

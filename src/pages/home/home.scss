@@ -1,11 +1,9 @@
 page-home {
 
 
+  margin: 0 auto;
+  display: block;
 
-    #ser1 {
-        margin: 0 auto;
-        display: block;
-    };
 
 
 
@@ -57,8 +55,6 @@ ion-toolbar{
     ion-card {
         font-size: 1.4rem;
         line-height: 1.5;
-        margin: 0 !important  ;
-        width: calc(100%) !important  ;
     }
 
     ion-card-content {
@@ -79,6 +75,7 @@ ion-toolbar{
     ion-slides {
         height: 25vh;
         width: 100%;
+
     }
 
     .NAVLOGO {
@@ -97,3 +94,34 @@ ion-title   {
   text-align: center;
 
 }
+
+
+.but {
+
+  width: 90%;
+  margin-right: 15px;
+}
+
+
+
+.item-start {
+
+  margin-right: 0px;
+};
+
+
+
+ion-thumbnail {
+  margin: 8px 0px 8px 0  !important;
+
+}
+
+.page-home .ion-slides {
+
+
+
+
+
+}
+
+

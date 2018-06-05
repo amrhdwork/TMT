@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, ViewChild} from '@angular/core';
+
 
 import { appsPage } from '../apps/apps';
 import { supportPage } from '../support/support';
@@ -16,4 +17,6 @@ export class TabsPage {
   constructor() {
 
   }
+
+
 }
