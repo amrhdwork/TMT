@@ -14,9 +14,9 @@
 <ion-content class="no-scroll">
 
 
+
+
   <ion-slides dir="rtl">
-
-
     <ion-slide>
       <ion-card *ngFor="let project of projects">
         <ion-item>
@@ -26,43 +26,7 @@
           <p>{{project.desc}}</p>
         </ion-item>
 
-        <img src="../../assets/imgs/a.png">
-
-        <ion-card-content>
-          <p>{{project.text}}</p>
-        </ion-card-content>
-        <ion-row>
-          <ion-col *ngIf="project.android != ''">
-            <button (click)="openSite(project.android)" ion-button icon-left clear small>
-              <ion-icon style="margin-left: 3px" ios="logo-android" md="logo-android"></ion-icon>
-              <div>ANDROID</div>
-            </button>
-          </ion-col>
-          <ion-col *ngIf="project.ios != ''">
-            <button (click)="openSite(project.ios)" ion-button icon-left clear small>
-              <ion-icon style="margin-left: 3px" ios="ios-appstore" md="md-appstore"></ion-icon>
-              <div>IOS</div>
-            </button>
-          </ion-col>
-          <ion-col *ngIf="project.website != ''">
-            <button (click)="openSite(project.website)" style="align-items: left;" ion-button icon-left clear small>
-              <ion-icon style="margin-left: 3px" ios="ios-globe" md="md-globe"></ion-icon>
-              <div>WEBSITE</div>
-            </button>
-          </ion-col>
-        </ion-row>
-
-      </ion-card>
-
-      <ion-card *ngFor="let project of projects">
-        <ion-item>
-
-
-          <h2>{{project.name}}</h2>
-          <p>{{project.desc}}</p>
-        </ion-item>
-
-        <img [src]="project.image">
+        <img style="padding: 60px ; display: block ; margin: auto" [src]="project.image">
 
         <ion-card-content>
           <p>{{project.text}}</p>
@@ -100,7 +64,7 @@
           <p>{{project.desc}}</p>
         </ion-item>
 
-        <img [src]="project.image">
+        <img style="padding: 60px ; display: block ; margin: auto" [src]="project.image">
 
         <ion-card-content>
           <p>{{project.text}}</p>
