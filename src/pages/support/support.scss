@@ -46,7 +46,6 @@ text-align: center;
     ion-card-content{
 
         padding: 0px !important ;
-        background-color: "light" ;
 
     }
 
@@ -63,5 +62,15 @@ text-align: center;
 
 
 }
+
+ion-navbar {
+
+
+  background-color: transparent !important;
+  background-image: url("../../assets/imgs/nav-background.png");
+
+}
+
+
 
 
